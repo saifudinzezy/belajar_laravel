@@ -62,3 +62,5 @@ Route::get('/input', 'MalasngodingController@input');
 Route::post('/proses', 'MalasngodingController@proses');
 //belajar orm dan eloquent
 Route::get('/karyawan', 'KaryawanController@index');
+//crud dengan eloquent
+Route::get('/pekerja', 'PekerjaController@index');
