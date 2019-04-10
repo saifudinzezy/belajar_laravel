@@ -64,3 +64,8 @@ Route::post('/proses', 'MalasngodingController@proses');
 Route::get('/karyawan', 'KaryawanController@index');
 //crud dengan eloquent
 Route::get('/pekerja', 'PekerjaController@index');
+//create
+//form create
+Route::get('/pekerja/tambah', 'PekerjaController@tambah');
+//create
+Route::post('/pekerja/store', 'PekerjaController@store');

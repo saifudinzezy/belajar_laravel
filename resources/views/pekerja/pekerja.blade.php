@@ -13,7 +13,7 @@
 				<h3>CRUD Data Pekerja</h3>
 			</div>
 			<div class="card-body">
-				<a href="/karyawan/tambah" class="btn btn-primary">+ Input Pekerja Baru</a>
+				<a href="/pekerja/tambah" class="btn btn-primary">+ Input Pekerja Baru</a>
 				<br><br>
 				<table class="table table-bordered table-hover table-striped">
 					<thead>
@@ -30,7 +30,7 @@
 								<td>{{$p->alamat}}</td>
 								<td>
 									<a href="/karyawan/edit/{{$p->id}}" class="btn btn-warning">Edit</a>
-									<a href="/karyawan/hapus/{{$p->id}}" class="btn btn-danger">Edit</a>
+									<a href="/karyawan/hapus/{{$p->id}}" class="btn btn-danger">Hapus</a>
 								</td>
 							</tr>
 						@endforeach
