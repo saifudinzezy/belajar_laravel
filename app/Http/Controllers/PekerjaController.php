@@ -38,4 +38,33 @@ class PekerjaController extends Controller
 
     	return redirect('/pekerja');
     }
+
+    //update
+    //tangkap data sesuai parameter kiriman dari controller
+    public function edit($id)
+    {
+    	//ambil data sesuai dengan id
+    	$pekerja = Pekerja::find($id);
+    	return view('pekerja.pekerja_edit', ['pekerja' => $pekerja]);
+    }
+
+    //update dengan put
+    public function update($id, Request $request)
+    {
+        //validasi kiriman data cek kosong/tidak
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        //ambi data dan cari data sesuai id
+        $pekerja = Pekerja::find($id);
+        //masukan data ke field
+        $pekerja->nama = $request->nama;
+        //tadi error salah penyembutan request menjadi required
+        $pekerja->alamat = $request->alamat;
+        //simpan data
+        $pekerja->save();
+        return redirect('/pekerja');
+    }
 }

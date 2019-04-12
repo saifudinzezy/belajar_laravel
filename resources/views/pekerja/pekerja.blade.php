@@ -29,8 +29,8 @@
 								<td>{{$p->nama}}</td>
 								<td>{{$p->alamat}}</td>
 								<td>
-									<a href="/karyawan/edit/{{$p->id}}" class="btn btn-warning">Edit</a>
-									<a href="/karyawan/hapus/{{$p->id}}" class="btn btn-danger">Hapus</a>
+									<a href="/pekerja/edit/{{$p->id}}" class="btn btn-warning">Edit</a>
+									<a href="/pekerja/hapus/{{$p->id}}" class="btn btn-danger">Hapus</a>
 								</td>
 							</tr>
 						@endforeach

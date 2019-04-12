@@ -69,3 +69,7 @@ Route::get('/pekerja', 'PekerjaController@index');
 Route::get('/pekerja/tambah', 'PekerjaController@tambah');
 //create
 Route::post('/pekerja/store', 'PekerjaController@store');
+//form update
+Route::get('/pekerja/edit/{id}', 'PekerjaController@edit');
+//form dengan put
+Route::put('/pekerja/update/{id}', 'PekerjaController@update');
