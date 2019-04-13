@@ -67,4 +67,16 @@ class PekerjaController extends Controller
         $pekerja->save();
         return redirect('/pekerja');
     }
+
+    //delete dengan method get
+    public function delete($id)
+    {
+        //cari data sesuia id
+        $pekerja = Pekerja::find($id);
+        //delete data
+        $pekerja->delete();
+        // return redirect("/pekerja");
+        //berfungsi utk mengalihkan ke halaman sebelumnya
+        return redirect()->back();
+    }
 }

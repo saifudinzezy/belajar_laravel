@@ -73,3 +73,5 @@ Route::post('/pekerja/store', 'PekerjaController@store');
 Route::get('/pekerja/edit/{id}', 'PekerjaController@edit');
 //form dengan put
 Route::put('/pekerja/update/{id}', 'PekerjaController@update');
+//form hapus
+Route::get('/pekerja/hapus/{id}', 'PekerjaController@delete');
