@@ -75,3 +75,18 @@ Route::get('/pekerja/edit/{id}', 'PekerjaController@edit');
 Route::put('/pekerja/update/{id}', 'PekerjaController@update');
 //form hapus
 Route::get('/pekerja/hapus/{id}', 'PekerjaController@delete');
+
+//belajar soft delete
+Route::get('/guru', 'GuruController@index');
+//hapus
+Route::get('/guru/hapus/{id}', 'GuruController@hapus');
+//tampilkan data yg telah softdelete
+Route::get('/guru/trash', 'GuruController@trash');
+//untuk mengembalikan data yang sudah ke soft delete
+Route::get('/guru/kembalikan/{id}', 'GuruController@kembalikan');
+//restore semua data yang ke softdelete
+Route::get('/guru/kembalikan_semua', 'GuruController@kembalikan_semua');
+//hapus permanen data yang ke doftdelete
+Route::get('/guru/hapus_permanen/{id}', 'GuruController@hapus_permanen');
+//hapus permanen semua data yg ke softdelete
+Route::get('/guru/hapus_permanen_semua', 'GuruController@hapus_permanen_semua');
