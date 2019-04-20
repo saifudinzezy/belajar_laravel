@@ -90,3 +90,5 @@ Route::get('/guru/kembalikan_semua', 'GuruController@kembalikan_semua');
 Route::get('/guru/hapus_permanen/{id}', 'GuruController@hapus_permanen');
 //hapus permanen semua data yg ke softdelete
 Route::get('/guru/hapus_permanen_semua', 'GuruController@hapus_permanen_semua');
+//one to one table
+Route::get('/pengguna', 'PenggunaController@index');
