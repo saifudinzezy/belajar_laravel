@@ -94,3 +94,5 @@ Route::get('/guru/hapus_permanen_semua', 'GuruController@hapus_permanen_semua');
 Route::get('/pengguna', 'PenggunaController@index');
 //many to one
 Route::get('/article', 'WebController@index');
+//many to many
+Route::get('/anggota', 'DikiController@index');
