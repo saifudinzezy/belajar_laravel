@@ -35,5 +35,16 @@ class MalasngodingController extends Controller
     	], $message);
 
     	return view('proses', ['data' => $request]);
-    }
+	}
+	
+	public function index($nama){
+		if($nama == "malasngoding"){
+			// return abort(403,'Anda tidak punya akses karena anda Malas Ngoding');
+			return abort(403);
+		}elseif($nama == "diki"){
+			return "Halo, ".$nama;
+		}else{
+			return abort(404);
+		}
+	}
 }

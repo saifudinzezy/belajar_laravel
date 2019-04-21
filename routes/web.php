@@ -96,3 +96,21 @@ Route::get('/pengguna', 'PenggunaController@index');
 Route::get('/article', 'WebController@index');
 //many to many
 Route::get('/anggota', 'DikiController@index');
+
+//session
+Route::get('/session/tampil','TesController@tampilkanSession');
+Route::get('/session/buat','TesController@buatSession');
+Route::get('/session/hapus','TesController@hapusSession');
+
+//notif session flash
+Route::get('/pesan','NotifController@index');
+Route::get('/pesan/sukses','NotifController@sukses');
+Route::get('/pesan/peringatan','NotifController@peringatan');
+Route::get('/pesan/gagal','NotifController@gagal');
+
+//menampilkan error
+Route::get('/malasngoding','MalasngodingController@index');
+Route::get('/malasngoding/{nama}','MalasngodingController@index');
+
+//kirim email y
+Route::get('/kirimemail','MalasemailController@index');
