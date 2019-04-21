@@ -28,6 +28,12 @@ class MalasEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('saifudin.zezy7@gmail.com')
+        ->view('emailku')
+        ->with(
+         [
+             'nama' => 'Diki Alfarabi Hadi',
+             'website' => 'www.malasngoding.com',
+         ]);
     }
 }
